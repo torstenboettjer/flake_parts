@@ -19,7 +19,9 @@
   outputs = inputs@{ self, nixpkgs, flake-parts, devshell }: flake-parts.lib.mkFlake { inherit inputs; } {
     systems = [ "x86_64-linux" ];
 
-    imports = [];
+    imports = [
+      ./modules/psql.nix
+    ];
 
     flake = {
       # your existing definitions before using flake-parts...
