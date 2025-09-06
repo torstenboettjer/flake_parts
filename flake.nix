@@ -20,7 +20,7 @@
     systems = [ "x86_64-linux" ];
 
     imports = [
-      ./modules/psql.nix
+      ./modules/nodejs-packages.nix
     ];
 
     flake = {
