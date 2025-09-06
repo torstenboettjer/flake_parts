@@ -22,7 +22,7 @@
     imports = [
       ./modules/psql.nix
       ./modules/nodejs-packages.nix
-      ./modules/nodejs-devshell.nix
+      #./modules/nodejs-devshell.nix
     ];
 
     flake = {
