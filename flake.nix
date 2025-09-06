@@ -20,9 +20,9 @@
     systems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
 
     imports = [
-      ./modules/psql.nix
+      #./modules/psql.nix
       ./modules/nodejs-packages.nix
-      #./modules/nodejs-devshell.nix
+      ./modules/nodejs-devshell.nix
     ];
 
     flake = {
