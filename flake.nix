@@ -17,9 +17,10 @@
   };
 
   outputs = inputs@{ self, nixpkgs, flake-parts, devshell }: flake-parts.lib.mkFlake { inherit inputs; } {
-    systems = [ "x86_64-linux" ];
+    systems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
 
     imports = [
+      ./modules/psql.nix
       ./modules/nodejs-packages.nix
       ./modules/nodejs-devshell.nix
     ];

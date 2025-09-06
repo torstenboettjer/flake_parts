@@ -7,4 +7,32 @@
 * Add eval "$(direnv hook bash)" to your .bashrc or eval "$(direnv hook bash)" to your .zshrc.
 3. I assume an existing git repository. If not at hand, create a new directory and execute git init.
 
-## Nodejs
+## Adding Nodejs
+
+```nix
+# flake.nix
+# ...
+    imports = [
+      ./flake-modules/nodejs-packages.nix
+      ./flake-modules/nodejs-devshell.nix
+    ];
+# ...
+```
+
+## Quickly check for errors
+
+```sh
+nix flake check
+```
+
+## Test the runtime
+
+```sh
+nix run `.#nodejs`
+```
+
+## Enter the devshell
+
+```sh
+nix develop
+```
