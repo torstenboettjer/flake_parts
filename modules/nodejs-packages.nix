@@ -1,6 +1,6 @@
 # modules/nodejs-packages.nix
 {
   perSystem = { pkgs, ... }: {
-    packages.nodejs = pkgs.nodejs_21;
+    packages.nodejs = pkgs.nodejs_24;
   };
 }
